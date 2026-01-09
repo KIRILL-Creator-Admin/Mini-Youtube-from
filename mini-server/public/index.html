@@ -1,81 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <title>Mini YouTube</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { margin:0; background:#0c0c0f; color:#e9e9ee; font-family:Arial,sans-serif; }
-    header { display:flex; gap:16px; align-items:center; padding:12px 16px; border-bottom:1px solid #23232a; background:#0e0e12; position:sticky; top:0; }
-    .brand { font-weight:800; color:#5ee072; }
-    .nav button { background:transparent; color:#e9e9ee; border:1px solid #23232a; padding:6px 10px; border-radius:8px; cursor:pointer; }
-    .nav button[disabled] { opacity:.6; cursor:default; }
-    main { padding:16px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
-    .card { background:#141418; border:1px solid #23232a; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; }
-    .thumb { width:100%; aspect-ratio:16/9; background:#0f0f14; display:grid; place-items:center; color:#9aa0a6; font-size:12px; }
-    .cardBody { padding:10px; display:grid; gap:8px; }
-    .cardTitle { font-weight:700; }
-    .cardMeta { font-size:12px; color:#9aa0a6; display:flex; justify-content:space-between; flex-wrap:wrap; gap:4px; }
-    .cardActions { display:flex; gap:8px; }
-    .btn { background:#1a1a20; color:#e9e9ee; border:1px solid #23232a; padding:6px 10px; border-radius:8px; cursor:pointer; }
-    .btnAccent { border-color:#5ee072; color:#5ee072; }
-    .btnDanger { border-color:#ff6b6b; color:#ff6b6b; }
-    .pager { margin-top:12px; display:flex; align-items:center; gap:8px; }
-    .status { margin-top:10px; color:#9aa0a6; }
-    .hidden { display:none; }
-    .modal { position:fixed; inset:0; background:rgba(0,0,0,.7); display:none; align-items:center; justify-content:center; z-index:100; }
-    .modalContent { background:#141418; padding:16px; border-radius:10px; max-width:900px; width:90%; }
-    .modalHeader { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
-    .modalHeader h2 { margin:0; font-size:16px; }
-    .closeBtn { background:transparent; border:none; color:#ff6b6b; font-size:20px; cursor:pointer; }
-    video { width:100%; max-height:70vh; border:1px solid #23232a; border-radius:10px; background:#000; }
-  </style>
 </head>
 <body>
-  <header>
-    <div class="brand">Mini YouTube</div>
-    <nav class="nav">
-      <button data-page="home">Home</button>
-      <button data-page="upload">Upload</button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Home -->
-    <section id="page-home">
-      <div id="grid" class="grid"></div>
-      <div class="pager">
-        <button id="prevPage">«</button>
-        <span id="pageInfo"></span>
-        <button id="nextPage">»</button>
-      </div>
-      <div id="homeStatus" class="status"></div>
-    </section>
-
-    <!-- Upload -->
-    <section id="page-upload" class="hidden">
-      <form id="uploadForm" enctype="multipart/form-data">
-        <input type="file" name="video" accept="video/*" required>
-        <input type="text" name="owner" placeholder="Ваше имя" required>
-        <button type="submit" class="btn btnAccent">Загрузить</button>
-      </form>
-      <div id="uploadStatus" class="status"></div>
-    </section>
-  </main>
-
-  <!-- Модальное окно -->
-  <div id="modal" class="modal">
-    <div class="modalContent">
-      <div class="modalHeader">
-        <h2 id="modalTitle"></h2>
-        <button class="closeBtn" id="closeModal">×</button>
-      </div>
-      <video id="player" controls preload="metadata"></video>
-      <div id="playerStatus" class="status"></div>
-    </div>
-  </div>
-
-  <script src="/app.js"></script>
+  <h1>Mini YouTube работает!</h1>
+  <script src="app.js"></script>
 </body>
 </html>
